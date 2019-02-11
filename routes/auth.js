@@ -70,6 +70,7 @@ module.exports = (app, passport) => {
   app.get("/edit-post/:id", isLoggedIn, function(req, res) {
     db.Posts.findOne({ where: { id: req.params.id } }).then(function(dbPosts) {
       var postData = dbPosts;
+      console.log(req.user);
       console.log("your post title is", postData.dataValues.PostTitle);
       res.render("project", {
         title: postData.dataValues.PostTitle,

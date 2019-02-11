@@ -49,9 +49,11 @@ socket.on("newMessage", function(message) {
 $("#message-form").on("submit", function(e){
   e.preventDefault();
   if($("[name=message]").val().trim() !== ''){
-var user = $(navbarDropdownMenuLink);
+var user = $("#userDropdownLink");
+
+
   socket.emit("createMessage", {
-    from: user[1].outerText,
+    from: user[0].outerText,
     text: $("[name=message]").val()
   }, function(){
   })
@@ -62,9 +64,9 @@ $(function() {
   $("#message-form").keypress(function (e) {
     if(e.which == 13 && $("[name=message]").val().trim() !== '') {
       //submit form via ajax, this is not JS but server side scripting so not showing here
-      var user = $(navbarDropdownMenuLink);
+      var user = $("#userDropdownLink");
       socket.emit("createMessage", {
-        from: user[1].outerText,
+        from: user[0].outerText,
         text: $("[name=message]").val()
       }, function(){
           })
