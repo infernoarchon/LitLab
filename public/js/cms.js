@@ -12,30 +12,42 @@ $(document).ready(function() {
     //   getPostData(postId);
     // }
   
-    // Getting jQuery references to the post body, title, form, and category select
-    var storydescInput = $("#storydescInput");
-    var storytitleInput = $("#storytitleInput");
-    var storyForm = $("#storyForm");
-    var userId = document.getElementById("user-id")
+
     // var postCategorySelect = $("#category");
     // Giving the postCategorySelect a default value
     // postCategorySelect.val("Personal");
     // Adding an event listener for when the form is submitted
-    $(storyForm).on("submit", function handleFormSubmit(event) {
+    $(".litForm").on("submit", function handleFormSubmit(event) {
       event.preventDefault();
+      var userId = document.getElementById("user-id")
+      if($(this)[0].id === "storyForm") {
+        var litDescInput = $("#storydescInput");
+        var litTitleInput = $("#storytitleInput");
+        var litCategory = "book"
+      }
+      if($(this)[0].id === "poemForm") {
+        var litDescInput = $("#poemdescInput");
+        var litTitleInput = $("#poemtitleInput");
+        var litCategory = "feather-alt"
+      }
+      if($(this)[0].id === "songForm") {
+        var litDescInput = $("#songdescInput");
+        var litTitleInput = $("#songtitleInput");
+        var litCategory = "music"
+      }
+      console.log(litCategory)
       // Wont submit the post if we are missing a body or a title
-      if (!storytitleInput.val().trim() || !storydescInput.val().trim()) {
+      if (!litTitleInput.val().trim() || !litDescInput.val().trim()) {
         return;
       }
       // Constructing a newPost object to hand to the database
-      var newStory = {
-        title: storytitleInput.val().trim(),
-        desc: storydescInput.val().trim(),
-        categoryid: 3,
+      var newPost = {
+        title: litTitleInput.val().trim(),
+        desc: litDescInput.val().trim(),
+        category: litCategory,
         userid: userId.textContent
       };
-  
-      console.log(newStory);
+
   
       // If we're updating a post run updatePost to update a post
       // Otherwise run submitPost to create a whole new post
@@ -44,7 +56,7 @@ $(document).ready(function() {
     //     updatePost(newPost);
     //   }
     //   else {
-        submitPost(newStory);
+        submitPost(newPost);
     //   }
     });
   

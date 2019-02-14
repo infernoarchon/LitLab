@@ -54,11 +54,6 @@ $(document).ready(function() {
   
     // This function constructs a post's HTML
     function createNewRow(post) {
-        var iconclass;
-        if(post.Category.Type="Story") {
-            iconclass="fas fa-book type-icon"
-        }
-    console.log("Alan look at this", post)
       c++
       var newPostCard = $("<tr>");
     //   newPostCard.addClass("card");
@@ -76,7 +71,7 @@ $(document).ready(function() {
       newPostCardAuthor.addClass("author-attr")
       newPostCardAuthor.text("by " + post.User.username)
       var newPostCardIcon = $("<i>")
-      newPostCardIcon.addClass(iconclass)
+      newPostCardIcon.addClass("fas type-icon fa-" + post.Category)
       var newPostCardDesc = $("<p>");
       newPostCardDesc.addClass("main-description")
       newPostCardDesc.text(post.PostDescription)

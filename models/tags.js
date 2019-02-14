@@ -1,8 +1,7 @@
 module.exports = function(sequelize, Sequelize) {
   var Tags = sequelize.define("Tags", {
-    Tag: { type: Sequelize.STRING },
-    CategoryID: { type: Sequelize.TINYINT },
-    PostID: { type: Sequelize.TINYINT }
+    PostId: { type: Sequelize.INTEGER },
+    TagName: { type: Sequelize.STRING }
   });
 
   //   Tags.associate = function(models) {

@@ -3,7 +3,7 @@ var db = require("../models");
 module.exports = function(app) {
   // Get all Posts
   app.get("/api/Posts", function(req, res) {
-    db.Posts.findAll({ include: [db.User, db.Category] }).then(function(
+    db.Posts.findAll({ include: [db.User] }).then(function(
       dbPosts
     ) {
       console.log(db.Posts);
@@ -16,8 +16,9 @@ module.exports = function(app) {
     db.Posts.create({
       PostTitle: req.body.title,
       PostDescription: req.body.desc,
-      CategoryId: req.body.categoryid,
-      UserId: req.body.userid
+      UserId: req.body.userid,
+      Category: req.body.category
+
     }).then(function(dbPosts) {
       res.json(dbPosts);
     });
