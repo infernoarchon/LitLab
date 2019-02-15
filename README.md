@@ -2,21 +2,18 @@
 
 LitLab is a concept collaborative writing tool that allows anyone to create awesome stories with others around the world. Try out our MVP developed by the LitLab team in just under two weeks.
 
-## Note before trying
-This concept currently covers a global chat room and allows for users to collaborate on stories in real time, however, final post content, other than title and description will not be saved in the database. Future versions will include the ability to create Poems and Song lyrics as well.
-
 ## Deployment
 
-The live project can be viewed here: https://litlab.herokuapp.com/
+The live project can be viewed here: http://www.litlab.io
 
 ## Test Accounts
 You can sign up for your own account or use one of the accounts below to test the app:
 
-email: demouser@gmail.com
-password: blahblah
+email: test@test.com
+password: test123
 
-email: anotherdemo@gmail.com
-password: blahblah
+email: ghostwriter@test.com
+password: ghost123
 
 ## Built With
 
