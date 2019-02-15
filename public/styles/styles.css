@@ -46,7 +46,7 @@ a:hover {
   text-decoration:none;
 }
 .proj-title {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 1em;
   margin-bottom: 0.175rem;
 }
@@ -93,9 +93,9 @@ a:hover {
 }
 
 .section-title {
-  font-size: 1em;
+  font-size: 0.875em;
   font-weight: 700;
-  padding: 1em 0 0 3em;
+  padding: 2em 0 0 3em;
   text-transform: uppercase;
   color: #999;
 }
@@ -135,7 +135,7 @@ h4 {
 
 
 .nav-link {
-  color: black !important;
+  color: #343A40 !important;
   font-weight: 400;
 }
 
@@ -166,7 +166,7 @@ h4 {
 }
 
 .navbar {
-  border-bottom: 1px solid #d0d0d0;
+  border-bottom: 1px solid #ccc;
   background: #fff;
 }
 
@@ -334,7 +334,7 @@ padding: 0;
 
 .main-title {
   margin-bottom: 0;
-  font-weight: 700;
+  font-weight: 400;
   color: #666;
   display: inline-block;
   clear: both;
@@ -460,6 +460,7 @@ select:focus {
 .firepad-toolbar {
   height: 48px !important;
   line-height: 0 !important;
+  background: #fff;
 }
 
 .firepad-with-toolbar .CodeMirror {
