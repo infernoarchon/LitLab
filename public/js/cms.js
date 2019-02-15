@@ -62,8 +62,9 @@ $(document).ready(function() {
   
     // Submits a new post and brings user to blog page upon completion
     function submitPost(Post) {
-      $.post("/api/posts/", Post, function() {
-        window.location.href = "/home";
+      $.post("/api/posts/", Post, function(data) {
+        console.log("ALAN" + data)
+        window.location.href = "/edit-post/" + data.id;
       });
     }
   
