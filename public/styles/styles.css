@@ -55,6 +55,7 @@ a:hover {
   color: #999;
   font-size: 0.875em;
   margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
 }
 
 .main-cap {
@@ -62,10 +63,14 @@ a:hover {
 }
 
 .type-icon {
-  float: left;
-  margin-right: 0.5em;
   color: #ccc;
   line-height: 1.3;
+  display: inline;
+  margin-right: 0.5em;
+}
+
+.browse-row .fas {
+  float: left;
 }
 
 .menu-icon {
@@ -309,8 +314,7 @@ padding: 0;
 
 .content-container {
   background: white;
-  padding: 0.5em;
-  overflow-y: scroll;
+  padding: 0;
 }
 
 
@@ -332,6 +336,8 @@ padding: 0;
   margin-bottom: 0;
   font-weight: 700;
   color: #666;
+  display: inline-block;
+  clear: both;
 }
 
 .main-description {
@@ -437,3 +443,54 @@ select:focus {
 .project-title {
   width: 50%;
 }
+
+.CodeMirror {
+  height: calc(100vh - 100px) !important;
+  padding-left: 20vw !important;
+  padding-right: 20vw !important;
+}
+
+
+
+
+.powered-by-firepad {
+  display: none !important;
+}
+
+.firepad-toolbar {
+  height: 48px !important;
+  line-height: 0 !important;
+}
+
+.firepad-with-toolbar .CodeMirror {
+  top: 48px !important;
+}
+
+.CodeMirror-scroll {
+  overflow-y: scroll !important;
+}
+
+.CodeMirror-code {
+  margin-top: 3em;
+}
+
+.firepad-btn {
+  border: 0 !important;
+  line-height: 1.75 !important;
+  color: #999 !important;
+}
+
+a.firepad-btn, a.firepad-btn:visited, a.firepad-btn:active {
+  background-color: transparent! important;
+}
+
+.firepad-dropdown {
+  font-size: 1em !important;
+  margin-top: -0.25em !important;
+}
+
+.firepad-dropdown-menu {
+  color: #000 !important;
+}
+
+

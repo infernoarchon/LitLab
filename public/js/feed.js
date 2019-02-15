@@ -77,7 +77,7 @@ $(document).ready(function() {
       newPostCardDesc.text(post.PostDescription)
       newPostCardCell.append(newPostCardLink)
       newPostCardLink.append(newPostCardHeading)
-      newPostCardCell.append(newPostCardIcon)
+      newPostCardAuthor.prepend(newPostCardIcon)
       newPostCardCell.append(newPostCardAuthor)
       newPostCardCell.append(newPostCardDesc)
       newPostCard.append(newPostCardHead)
