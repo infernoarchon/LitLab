@@ -8,7 +8,7 @@ var http = require("http");
 var socketIO = require("socket.io");
 
 var db = require("./models");
-var seed = require("./seeds");
+// var seed = require("./seeds");
 
 const { generateMessage } = require("./utils/message");
 var app = express();
@@ -94,7 +94,7 @@ require("./config/passport/passport.js");
 // Load passport strategies
 require("./config/passport/passport.js")(passport, db.User);
 
-var syncOptions = { force: true };
+var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
