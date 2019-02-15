@@ -26,6 +26,7 @@ password: ghost123
 * MySql Database
 * Passport.js
 * Socket.io
+* Firebase
 
 ## App Prototype
 
